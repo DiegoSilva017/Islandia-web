@@ -1,0 +1,245 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  color: #333;
+  background-color: #f1faee;
+  line-height: 1.6;
+  animation: fadeIn 1s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.conteiner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.cabecalho {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 1.5rem 0;
+  background: rgba(241, 250, 238, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(29, 53, 87, 0.1);
+}
+
+.cabecalho .conteiner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #1d3557;
+}
+
+.navegacao-principal ul {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.navegacao-principal a {
+  text-decoration: none;
+  color: #1d3557;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.navegacao-principal a:hover {
+  color: #e63946;
+}
+
+.navegacao-principal a.botao-nav {
+  background-color: #1d3557;
+  color: #f1faee;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+.navegacao-principal a.botao-nav:hover {
+  background-color: #e63946;
+  color: #f1faee;
+  transform: scale(1.05);
+}
+
+.secao {
+  padding: 6rem 2rem;
+}
+
+.cabecalho-pagina {
+  background-color: #fff;
+  text-align: center;
+  padding: 4rem 2rem;
+  border-bottom: 1px solid rgba(29, 53, 87, 0.1);
+}
+
+.cabecalho-pagina h1 {
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 3.5rem;
+  color: #1d3557;
+  margin-bottom: 1rem;
+}
+
+.cabecalho-pagina p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.item-ponto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-bottom: 6rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.item-ponto:last-child {
+  margin-bottom: 0;
+}
+
+.item-ponto-invertido .item-imagem {
+  order: 2;
+}
+
+.item-imagem img {
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.item-conteudo h2 {
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 2.5rem;
+  color: #1d3557;
+  margin-bottom: 1.5rem;
+}
+
+.item-conteudo p {
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.botao-principal {
+  background-color: #e63946;
+  color: #f1faee;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.botao-principal:hover {
+  background-color: #1d3557;
+  transform: scale(1.05);
+}
+.rodape {
+  background-color: #1d3557;
+  color: rgba(241, 250, 238, 0.8);
+  padding-top: 4rem;
+}
+
+.rodape-grade {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 4rem;
+  padding-bottom: 4rem;
+}
+
+.rodape-titulo {
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.rodape a,
+.rodape p {
+  color: rgba(241, 250, 238, 0.7);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.rodape a:hover {
+  color: #fff;
+}
+.rodape ul {
+  list-style: none;
+}
+
+.rodape-direitos {
+  text-align: center;
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(241, 250, 238, 0.2);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 1024px) {
+  .rodape-grade {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+
+  .navegacao-principal {
+    display: none;
+  }
+
+  .cabecalho-pagina h1 {
+    font-size: 2.5rem;
+  }
+
+  .item-ponto {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .item-ponto-invertido .item-imagem {
+    order: 0;
+  }
+}
