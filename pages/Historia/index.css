@@ -7,11 +7,11 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 1rem;
   scroll-behavior: smooth;
 }
 
-@keyframes fadeIn {
+@keyframes inicio {
   from {
     opacity: 0;
     transform: translateY(10px);
@@ -27,7 +27,7 @@ body {
   color: #333;
   background-color: #f1faee;
   line-height: 1.6;
-  animation: fadeIn 1s ease-in-out;
+  animation: inicio 1s ease-in-out;
 }
 
 .conteiner {
@@ -62,7 +62,7 @@ body {
 .navegacao-principal ul {
   display: flex;
   align-items: center;
-  gap: 2.5rem;
+  gap: 1rem;
   list-style: none;
 }
 
@@ -135,7 +135,6 @@ body {
 }
 .botao-principal:hover {
   background-color: #1d3557;
-  transform: scale(1.05);
 }
 
 .hero-imagem img {
